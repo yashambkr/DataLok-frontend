@@ -219,7 +219,7 @@ export default function LoginPage() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center p-8 text-white">
             <h1 className="text-2xl md:text-3xl font-bold mb-4">
-              Welcome to Leyu
+              Welcome to Sanchay
             </h1>
             <p className="text-lg">Log in to your account</p>
           </div>
@@ -232,10 +232,12 @@ export default function LoginPage() {
           <div className="w-full py-5">
             <div className="flex justify-center mb-7">
               <Image
-                src="/logo/leyu.png"
-                width={168}
-                height={51}
-                alt="Leyu Logo"
+                src="/logo/sanchay.png"
+                width={210}
+                height={72}
+                alt="Sanchay Logo"
+                priority
+                className="h-14 w-auto object-contain"
               />
             </div>
 

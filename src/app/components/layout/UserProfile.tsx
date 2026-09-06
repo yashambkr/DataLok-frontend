@@ -124,8 +124,8 @@ const UserProfile: React.FC<UserProfileProps> = ({
             onError={(e) => handleImageError(e, "/default-avatar.png")}
           />
           <div>
-            <p className="text-gray-700">{user.name || user.username}</p>
-            <p className="text-sm text-gray-500">{user.role || " "}</p>
+            <p className="text-sm font-medium text-white truncate max-w-[140px]">{user.name || user.username}</p>
+            <p className="text-xs text-sky-200 truncate">{user.role || " "}</p>
           </div>
         </>
       )}

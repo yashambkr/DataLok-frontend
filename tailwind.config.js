@@ -1,19 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
-        primaryButton: "#095FAF",
-        green: {
-          600: "#16a34a", // For the Leyu logo
-        },
-        myGreen: "#00AC26",
+        primary: "#2B6CB0",
+        primaryButton: "#2B6CB0",
+        navy: "#1A365D",
+        growthOrange: "#F97316",
+        processGreen: "#16A34A",
+        coolBg: "#F4F8F9",
+        charcoal: "#1E293B",
         blue: {
-          600: "#2563eb", // For buttons
-          700: "#1d4ed8",
+          600: "#2B6CB0",
+          700: "#1A365D",
         },
-        primary: "#095FAF",
+        green: {
+          600: "#16A34A",
+        },
+        myGreen: "#16A34A",
       },
     },
   },

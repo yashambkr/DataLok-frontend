@@ -58,9 +58,10 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, isSidebarOpen }) => {
   // Always use Link component for internal navigation to maintain React state
   const renderLink = (href: string, labelKey: string, isMainItem = false) => {
     const label = t(labelKey as any);
+    const isItemActive = isMainItem ? active : pathname === href;
     const baseClasses = isMainItem 
-      ? `flex items-center flex-1 text-lg ${active ? "text-bold text-primary bg-[#095FAF]/10 rounded-2xl p-2" : "text-gray-700 hover:text-primary"}`
-      : `block text-base ${pathname === href ? "text-primary bg-[#095FAF]/10 rounded-2xl p-2" : "text-gray-700 hover:text-primary"}`;
+      ? `flex items-center flex-1 text-base ${isItemActive ? "font-semibold text-white bg-[#2B6CB0] rounded-xl p-2.5 shadow-sm" : "text-slate-200 hover:text-white hover:bg-white/10 rounded-xl p-2.5 transition-all"}`
+      : `block text-sm ${isItemActive ? "font-medium text-white bg-[#2B6CB0] rounded-xl px-3 py-2 shadow-sm" : "text-slate-300 hover:text-white hover:bg-white/10 rounded-xl px-3 py-2 transition-all"}`;
 
     return (
       <Link href={href} className={baseClasses}>
@@ -69,7 +70,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, isSidebarOpen }) => {
             <Icons
               iconName={item.iconName}
               isActive={active}
-              className="mr-3 h-6 w-6"
+              className={`mr-3 h-5 w-5 ${active ? "text-white" : "text-slate-300"}`}
             />
             {isSidebarOpen && <span>{label}</span>}
           </>
@@ -81,17 +82,17 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, isSidebarOpen }) => {
 
   return (
     <li>
-      <div className="flex items-center justify-between py-2">
+      <div className="flex items-center justify-between py-1">
         {renderLink(item.href, item.labelKey as string, true)}
         
         {item.subItems && isSidebarOpen && (
           <button
             onClick={toggleSubMenu}
-            className="p-2 focus:outline-none"
+            className="p-2 focus:outline-none rounded-lg hover:bg-white/10"
             aria-label={isSubMenuOpen ? t('collapseSubmenu') : t('expandSubmenu')}
           >
             <ChevronDown
-              className={`h-6 w-6 text-gray-900 transition-transform duration-200 ${
+              className={`h-5 w-5 text-slate-300 hover:text-white transition-transform duration-200 ${
                 isSubMenuOpen ? "rotate-0" : "rotate-180"
               }`}
             />

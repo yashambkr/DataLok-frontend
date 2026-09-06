@@ -67,7 +67,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     <div
       className={`${
         isMobile && !isOpen ? "hidden" : isOpen ? "w-64" : "w-16"
-      } h-screen bg-[#FCFCFD] p-4 flex flex-col fixed top-0 left-0 transition-all duration-300 z-50 overflow-x-auto`}
+      } h-screen bg-[#1A365D] text-slate-100 border-r border-[#24436E] p-4 flex flex-col fixed top-0 left-0 transition-all duration-300 z-50 overflow-x-auto`}
       style={{
         scrollbarWidth: 'none', /* Firefox */
         msOverflowStyle: 'none', /* Internet Explorer 10+ */
@@ -79,29 +79,42 @@ const Sidebar: React.FC<SidebarProps> = ({
         }
       `}</style>
       {/* Logo and Toggle Button */}
-      <div className="mb-10 flex items-center justify-between">
-        <div className="flex flex-col items-center">
-          {isOpen && (
+      <div className="mb-8 flex items-center justify-between">
+        <div className="flex flex-col items-center w-full">
+          {isOpen ? (
             <>
-              <Image
-                src="/logo/leyu.png"
-                alt="Logo"
-                width={110}
-                height={35}
-                className="mb-2"
-                priority // Add priority for faster loading
-              />
+              <div className="bg-white px-3 py-2 rounded-xl w-full flex items-center justify-center shadow-md">
+                <Image
+                  src="/logo/sanchay.png"
+                  alt="Sanchay Logo"
+                  width={180}
+                  height={60}
+                  className="h-9 w-auto object-contain"
+                  priority
+                />
+              </div>
               {effectiveRole && (
-                <span className="text-xs font-medium text-gray-600 capitalize">
+                <span className="text-xs font-semibold text-sky-200 capitalize tracking-wider mt-2.5 px-3 py-0.5 rounded-full bg-white/10 border border-white/15">
                   {effectiveRole}
                 </span>
               )}
             </>
+          ) : (
+            <div className="bg-white p-1.5 rounded-lg shadow-sm">
+              <Image
+                src="/logo/sanchay-icon.png"
+                alt="Sanchay Icon"
+                width={32}
+                height={32}
+                className="h-7 w-7 object-contain"
+                priority
+              />
+            </div>
           )}
         </div>
         {isMobile && (
-          <button onClick={toggleSidebar} className="p-2">
-            <ArrowLeft className="h-6 w-6 text-gray-700" />
+          <button onClick={toggleSidebar} className="p-2 ml-2">
+            <ArrowLeft className="h-6 w-6 text-white" />
           </button>
         )}
       </div>
