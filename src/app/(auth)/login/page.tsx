@@ -219,7 +219,7 @@ export default function LoginPage() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center p-8 text-white">
             <h1 className="text-2xl md:text-3xl font-bold mb-4">
-              Welcome to Sanchay
+              Welcome to Inim
             </h1>
             <p className="text-lg">Log in to your account</p>
           </div>
@@ -235,7 +235,7 @@ export default function LoginPage() {
                 src="/logo/sanchay.png"
                 width={210}
                 height={72}
-                alt="Sanchay Logo"
+                alt="Inim Logo"
                 priority
                 className="h-14 w-auto object-contain"
               />

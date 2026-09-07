@@ -86,7 +86,7 @@ const Sidebar: React.FC<SidebarProps> = ({
               <div className="bg-white px-3 py-2 rounded-xl w-full flex items-center justify-center shadow-md">
                 <Image
                   src="/logo/sanchay.png"
-                  alt="Sanchay Logo"
+                  alt="Inim Logo"
                   width={180}
                   height={60}
                   className="h-9 w-auto object-contain"
@@ -103,7 +103,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             <div className="bg-white p-1.5 rounded-lg shadow-sm">
               <Image
                 src="/logo/sanchay-icon.png"
-                alt="Sanchay Icon"
+                alt="Inim Icon"
                 width={32}
                 height={32}
                 className="h-7 w-7 object-contain"

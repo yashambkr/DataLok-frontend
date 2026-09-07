@@ -4,7 +4,7 @@ import Providers from "@/app/components/Providers";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sanchay - Data Collection & Task Management",
+  title: "Inim - Data Collection & Task Management",
   description: "A comprehensive data collection and task management platform",
   icons: {
     icon: "/logo/sanchay-icon.png",

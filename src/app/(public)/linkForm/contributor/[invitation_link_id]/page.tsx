@@ -278,16 +278,18 @@ const LinkFormPage: React.FC = () => {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center p-8 text-white">
             <h1 className="text-2xl md:text-3xl font-bold mb-4">
-              Welcome to Sanchay
+              Welcome to Inim
             </h1>
-            <p className="text-lg">Create your account</p>
+            <p className="text-lg">Set up your password to continue</p>
           </div>
         </div>
       </div>
-      <div className="flex-1 flex items-center justify-center bg-gray-100 p-8">
+
+      {/* Form Section */}
+      <div className="w-full md:w-3/5 flex items-center justify-center p-6 sm:p-8 md:p-12 bg-white min-h-screen">
         <div className="w-full max-w-md">
-          <div className="text-center mb-8">
-            <Image src="/logo/sanchay.png" width={210} height={72} alt="Sanchay Logo" className="mx-auto h-12 w-auto object-contain" priority />
+          <div className="flex justify-center mb-7">
+            <Image src="/logo/sanchay.png" width={210} height={72} alt="Inim Logo" className="mx-auto h-12 w-auto object-contain" priority />
             <h2 className="text-2xl font-bold mt-4">Create Your Account</h2>
             <p className="text-sm text-gray-600">Step {step} of 2</p>
           </div>
